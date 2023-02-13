@@ -10,7 +10,8 @@ from tensorflow.keras.utils import plot_model
 from numpy.random import seed
 import spacy
 from spacy import displacy
-data = pd.read_csv('ner_dataset.csv',encoding = 'unicode_escape',on_bad_lines='skip')
+from dataExchanging import ner_dataset
+data = ner_dataset
 data = data.drop("Unnamed: 0",axis=1)
 
 from itertools import chain
